@@ -21,6 +21,7 @@ public class SpeakerServiceImpl implements SpeakerService {
     @Autowired
     private SpeakerRepository speakerRepository;
 
+
     @Override
     public List<SpeakerDao> getSpeakers() {
         return speakerRepository.findAll().stream().map(
@@ -28,6 +29,20 @@ public class SpeakerServiceImpl implements SpeakerService {
                         .type(speaker.getType())
                         .salary(speaker.getSalary())
                         .email(speaker.getEmail())
+                        .age(speaker.getAge())
+                        .name(speaker.getName())
+                        .id(speaker.getId()).build()
+        ).toList();
+    }
+
+    @Override
+    public List<SpeakerDao> getSpeakers1() {
+        return speakerRepository.findAll().stream().map(
+                speaker -> SpeakerDao.builder()
+                        .status(speaker.getStatus())
+                        .type(speaker.getType())
+                        .address(speaker.getAddress())
+                        .cellphone(speaker.getCellphone())
                         .age(speaker.getAge())
                         .name(speaker.getName())
                         .id(speaker.getId()).build()

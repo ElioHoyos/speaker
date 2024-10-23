@@ -27,7 +27,7 @@ public class SpeakerController {
 
     @GetMapping("/custom")
     public List<SpeakerDao> getAllByCustom(){
-        return speakerService.getSpeakers();
+        return speakerService.getSpeakers1();
     }
 
     @GetMapping("/{Id}")
@@ -38,6 +38,7 @@ public class SpeakerController {
     @PostMapping
     public void saveSpeaker(@RequestBody @Valid SpeakerRequestDao speaker){
         speakerService.save(speaker);
+        //return "User created with email: " + speaker.getEmail();
     }
 
     @DeleteMapping("/{Id}")

@@ -10,6 +10,7 @@ import java.util.Optional;
 public interface SpeakerService {
 
     List<SpeakerDao> getSpeakers();
+    List<SpeakerDao> getSpeakers1();
     Optional<Speaker> getSpeaker(Long Id);
     void save(SpeakerRequestDao speaker);
     void delete(Long id);

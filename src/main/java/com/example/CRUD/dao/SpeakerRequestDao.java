@@ -3,7 +3,8 @@ package com.example.CRUD.dao;
 import com.example.CRUD.entity.SpeakerType;
 import lombok.Builder;
 import lombok.Getter;
-
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import java.math.BigDecimal;
 
@@ -16,10 +17,11 @@ public class SpeakerRequestDao {
     private String name;
     private Integer age;
     private String address;
+    @NotBlank(message = "Email is mandatory")
+    @Email(message = "Email should be valid")
     private String email;
     private BigDecimal salary;
     private String cellphone;
     private Boolean status;
     private SpeakerType type;
-
 }

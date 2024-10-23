@@ -22,3 +22,4 @@ public class SpeakerDao implements Serializable {
     private SpeakerType type;
 
 }
+
