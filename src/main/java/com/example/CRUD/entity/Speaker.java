@@ -1,16 +1,14 @@
 package com.example.CRUD.entity;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 
 @Getter
-@Setter
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "speaker")
 public class Speaker {
@@ -28,20 +26,4 @@ public class Speaker {
     @Enumerated(EnumType.STRING)
     private SpeakerType type;
 
-    // Constructor sin parámetros
-    public Speaker() {
-    }
-
-    // Otros constructores, getters y setters
-    public Speaker(Long id, String name, Integer age, String address, String email, BigDecimal salary, String cellphone, Boolean status, SpeakerType type) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.address = address;
-        this.email = email;
-        this.salary = salary;
-        this.cellphone = cellphone;
-        this.status = status;
-        this.type = type;
-    }
 }

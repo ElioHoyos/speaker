@@ -1,5 +1,7 @@
 package com.example.CRUD.controller;
 
+import com.example.CRUD.dao.Speaker1Dao;
+import com.example.CRUD.dao.Speaker2Dao;
 import com.example.CRUD.dao.SpeakerDao;
 import com.example.CRUD.dao.SpeakerRequestDao;
 import com.example.CRUD.entity.Speaker;
@@ -21,12 +23,12 @@ public class SpeakerController {
     private SpeakerService speakerService;
 
     @GetMapping("/custom2")
-    public List<SpeakerDao> getAll(){
+    public List<Speaker2Dao> getAll(){
         return speakerService.getSpeakers();
     }
 
-    @GetMapping("/custom")
-    public List<SpeakerDao> getAllByCustom(){
+    @GetMapping("/custom1")
+    public List<Speaker1Dao> getAllByCustom(){
         return speakerService.getSpeakers1();
     }
 
