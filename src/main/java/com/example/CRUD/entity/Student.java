@@ -1,30 +1,28 @@
 package com.example.CRUD.entity;
 
-import com.example.CRUD.entity.enums.SpeakerType;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
 
 @Getter
 @Builder
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "speaker")
-public class Speaker {
+@Table(name = "student")
+public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Integer age;
-    private String address;
+    private String dni;
     private String email;
-    private BigDecimal salary;
     private String cellphone;
+    private Integer age;
     private Boolean status;
-    @Enumerated(EnumType.STRING)
-    private SpeakerType type;
 
 }

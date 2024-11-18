@@ -1,4 +1,4 @@
-package com.example.CRUD.entity;
+package com.example.CRUD.entity.enums;
 
 import lombok.Getter;
 

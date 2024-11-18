@@ -2,7 +2,6 @@ package com.example.CRUD.controller;
 
 import com.example.CRUD.dao.Speaker1Dao;
 import com.example.CRUD.dao.Speaker2Dao;
-import com.example.CRUD.dao.SpeakerDao;
 import com.example.CRUD.dao.SpeakerRequestDao;
 import com.example.CRUD.entity.Speaker;
 import com.example.CRUD.service.SpeakerService;

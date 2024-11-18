@@ -1,6 +1,6 @@
 package com.example.CRUD.dao;
 
-import com.example.CRUD.entity.SpeakerType;
+import com.example.CRUD.entity.enums.SpeakerType;
 import lombok.Builder;
 import lombok.Getter;
 import javax.validation.constraints.Email;
