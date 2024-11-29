@@ -6,6 +6,6 @@ public class SpeakerNotFoundException extends RuntimeException {
     }
 
   public SpeakerNotFoundException(Long studentId) {
-    super("Speaker not found with id: " + studentId);
+    super("Speaker no encontrado: " + studentId);
   }
 }
