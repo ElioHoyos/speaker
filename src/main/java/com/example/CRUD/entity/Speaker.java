@@ -2,7 +2,10 @@ package com.example.CRUD.entity;
 
 import com.example.CRUD.entity.enums.SpeakerType;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 

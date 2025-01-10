@@ -6,8 +6,6 @@ import com.example.CRUD.entity.Speaker;
 import com.example.CRUD.entity.Student;
 import com.example.CRUD.entity.enums.ScoreType;
 import com.example.CRUD.exception.NotFoundException;
-import com.example.CRUD.exception.SpeakerNotFoundException;
-import com.example.CRUD.exception.StudentNotFoundException;
 import com.example.CRUD.repository.ScoreRepository;
 import com.example.CRUD.repository.SpeakerRepository;
 import com.example.CRUD.repository.StudentRepository;

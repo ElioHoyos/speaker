@@ -44,7 +44,8 @@ public class SpeakerServiceImpl implements SpeakerService {
                         .age(speaker.getAge())
                         .email(speaker.getEmail())
                         .name(speaker.getName())
-                        .id(speaker.getId()).build()
+                        .id(speaker.getId())
+                        .build()
         ).collect(Collectors.toList());
     }
 
@@ -54,19 +55,19 @@ public class SpeakerServiceImpl implements SpeakerService {
     }
 
     @Override
-    public void save(SpeakerRequestDao student) {
+    public void save(SpeakerRequestDao speakerRequestDao) {
 
-        ValidateGlobal.validateSpeaker(student);
+        ValidateGlobal.validateSpeaker(speakerRequestDao);
 
         speakerRepository.save(Speaker.builder()
-                 .name(student.getName())
-                .email(student.getEmail())
-                .age(student.getAge())
-                .address(student.getAddress())
-                .salary(student.getSalary())
-                .cellphone(student.getCellphone())
-                .status(student.getStatus())
-                .type(student.getType())
+                 .name(speakerRequestDao.getName())
+                .email(speakerRequestDao.getEmail())
+                .age(speakerRequestDao.getAge())
+                .address(speakerRequestDao.getAddress())
+                .salary(speakerRequestDao.getSalary())
+                .cellphone(speakerRequestDao.getCellphone())
+                .status(speakerRequestDao.getStatus())
+                .type(speakerRequestDao.getType())
                 .build());
     }
 
